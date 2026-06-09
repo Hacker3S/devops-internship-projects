@@ -69,6 +69,6 @@ devops-internship-projects/
 
 ## Author
 
-**[Your Name]**  
+**Shawn Sreeju Sampath**  
 DevOps Internship — 2025  
-[GitHub Profile](https://github.com/yourusername)
+[GitHub Profile](https://github.com/Hacker3S)
