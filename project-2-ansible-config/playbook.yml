@@ -1,0 +1,41 @@
+---
+- name: Configure Web Server Using Ansible
+  hosts: webservers
+  become: yes
+
+  tasks:
+
+    # ── Task 1: Update the package cache ──────────────────────────
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
+    # ── Task 2: Install Nginx web server ──────────────────────────
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    # ── Task 3: Start and enable Nginx ────────────────────────────
+    - name: Start and enable Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    # ── Task 4: Deploy custom HTML page ───────────────────────────
+    - name: Deploy custom index.html
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    # ── Task 5: Verify Nginx is running ───────────────────────────
+    - name: Check Nginx service status
+      service_facts:
+
+    - name: Print Nginx status
+      debug:
+        msg: "Nginx is {{ ansible_facts.services['nginx.service'].state }}"
