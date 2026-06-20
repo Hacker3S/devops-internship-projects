@@ -16,7 +16,6 @@ This repository contains all projects completed as part of an unpaid DevOps inte
 |---|---------|-----------|--------|
 | 1 | [Build Automation Using Maven](./project-1-maven-build/) | Java, Maven | ✅ Completed |
 | 2 | [Configuration Management Using Ansible](./project-2-ansible-config/) | Ansible, Nginx, Linux | ✅ Completed |
-| 3 | Coming Soon | — | 🔄 In Progress |
 
 ---
 
